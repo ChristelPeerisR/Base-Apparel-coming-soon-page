@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Josefin sans", sans-serif;
+    font-size: 16px;
+}
+
+header {
+    position: absolute;
+    height: auto;
+    width: 100%;
+    padding-left: 10%;
+    padding-top: 50px;
+}
+
+header img {
+    width: 150px;
+}
+
+.container {
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: row;
+}
+
+.container .base {
+    width: 100%;
+    height: 100vh;
+    padding-top: 30vh;
+    padding-left: 10%;
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-size: cover;
+}
+
+.container .photo {
+    width: 80%;
+    height: 100vh;
+    background-image: url(images/hero-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container .base h1 {
+    font-size: 5rem;
+    text-align: left;
+    letter-spacing: .5rem;
+    color: hsl(0, 36%, 70%);
+    text-transform: uppercase;
+    line-height: 5.5rem;
+    font-weight: 200;
+}
+
+.container .base h1 span {
+    color: hsl(0, 6%, 24%);
+    font-weight: 700;
+}
+
+.container .base p {
+    text-align: left;
+    color: hsl(0, 36%, 70%);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin: 20px auto 40px 0;
+}
+
+.container form {
+    position: relative;
+    display: block;
+    height: 50px;
+    width: 430px;
+    margin-top: -10px;
+}
+
+.container form input {
+    position: absolute;
+    width: 100%;
+    outline: none;
+    border: 1px solid hsl(0, 36%, 70%);
+    height: 100%;
+    border-radius: 50px;
+    padding-left: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.1rem;
+}
+
+.container form button {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    border: none;
+    height: 100%;
+    border-radius: 50px;
+    outline: none;
+    color: white;
+    width: 80px;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    box-shadow: 0px 0px 18px 1px #f4aaab82;
+    transition: .3s ease box-shadow;
+}
+
+.container form input::placeholder {
+    color: hsl(0, 36%, 70%);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1rem;
+    opacity: .8;
+}
+
+.container form button:hover {
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsla(0, 52%, 80%, 1));
+    box-shadow: 0px 0px 13px 2px #f4aaabbf;
+}
+
+.container form .errori {
+    display: inline-block;
+    position: absolute;
+    top: 25%;
+    right: 90px;
+    display: none;
+}
+
+.container form .msg {
+    position: absolute;
+    left: 30px;
+    top: 40px;
+    display: none;
+}
+
+.container form.error .msg,
+.container form.error .errori {
+    display: block;
+}
+
+.container form.error input {
+    border: 2px solid hsl(0, 93%, 68%);
+}
+
+.container form.success input {
+    border: 2px solid rgba(55, 204, 138, 255);
+}
+
+@media screen and (max-width:950px) {
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .container .photo {
+        background-image: url(images/hero-mobile.jpg);
+        height: 400px;
+        width: 100%;
+        margin-top: 130px;
+    }
+
+    .container .base{
+        padding: 120px 0px ;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .container .base h1{
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .container .base p{
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .container form button{
+        width: 80px;
+        right: -230px;
+    }
+
+    .container form .msg{
+        left: 130px;
+        width: 100%;
+    }
+
+    .container form .errori{
+        left: 125%;
+    }
+}
+
+@media screen and (max-width:800px){
+
+    .container{
+        padding-left: 0px;
+        margin-left: 0px;
+    }
+
+    .container form{
+        text-align: left;
+        right: 0px;
+        width: 370px;
+        padding-left: 70px;
+        margin-left: 0px;
+    }
+
+    .container form button{
+        width: 70px;
+        right: -100px;
+    }
+
+    .container form .msg{
+        left: 10px;
+        width: 100%;
+    }
+
+    .container form .errori{
+        left: 100%;
+    }
+}
