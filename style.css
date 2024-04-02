@@ -223,3 +223,43 @@ header img {
         left: 100%;
     }
 }
+
+@media screen and (max-width:400px){
+    .container{
+        padding-left: 0px;
+        margin-left: 0px;
+    }
+
+    .container form{
+        text-align: left;
+        right: 0px;
+        width: 300px;
+        padding-left: 40px;
+        margin-left: 0px;
+    }
+
+    .container form button{
+        width: 70px;
+        right: -60px;
+    }
+
+    .container form .msg{
+        left: -20px;
+        top: 55px;
+        width: 100%;
+    }
+
+    .container form .errori{
+        left:87%;
+    }
+
+    .container .base h1{
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    .container .base p{
+        font-size: .9rem;
+        margin: 0px 30px 30px 30px;
+    }
+}
