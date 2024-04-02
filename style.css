@@ -72,6 +72,7 @@ header img {
     font-size: 1rem;
     line-height: 1.5rem;
     margin: 20px auto 40px 0;
+    width: 60%;
 }
 
 .container form {
@@ -234,13 +235,13 @@ header img {
         text-align: left;
         right: 0px;
         width: 300px;
-        padding-left: 40px;
+        padding-left: 25px;
         margin-left: 0px;
     }
 
     .container form button{
         width: 70px;
-        right: -60px;
+        right: -45px;
     }
 
     .container form .msg{
@@ -250,7 +251,7 @@ header img {
     }
 
     .container form .errori{
-        left:87%;
+        left:83%;
     }
 
     .container .base h1{
@@ -261,5 +262,6 @@ header img {
     .container .base p{
         font-size: .9rem;
         margin: 0px 30px 30px 30px;
+        width: 85%;
     }
 }
